@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= Figaro.env.database_pool %>
+  timeout: <%= Figaro.env.database_timeout %>
+  username: <%= Figaro.env.database_username %>
+  password: <%= Figaro.env.database_password %>
+  database: <%= Figaro.env.database_name %>
+  host: <%= Figaro.env.database_name %>
+  port: <%= Figaro.env.database_name %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
