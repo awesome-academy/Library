@@ -5,7 +5,7 @@
   book: "Book"
   log_in: "Log In"
   footer:
-    name: "Pham Ba Dat and Ho Trung Anh"
+    name: "Hong Son and Hoai Nam"
     link_framgia: "http://recruit.framgia.vn/"
     link_name: "https://www.facebook.com//"
     created_by: "The %{href1} by %{href2}"

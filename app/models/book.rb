@@ -2,10 +2,10 @@ class Book < ApplicationRecord
   belongs_to :publisher
   belongs_to :category
   has_many :request_details
-  has_many :relationships, as: :followed
-  has_many :followers, through: :relationship, source: :follower
+  has_many :passive_relationships, as: :followable
+  has_many :followers, through: :passive_relationships, source: :follower
   has_many :favorites
-  has_many :comments
+  has_many :comments, as: :commentable
   has_many :author_books
   has_many :authors, through: :author_books
 
