@@ -6,8 +6,8 @@ default: &default
   username: <%= Figaro.env.database_username %>
   password: <%= Figaro.env.database_password %>
   database: <%= Figaro.env.database_name %>
-  host: <%= Figaro.env.database_name %>
-  port: <%= Figaro.env.database_name %>
+  host: <%= Figaro.env.database_host %>
+  port: <%= Figaro.env.database_port %>
 
 development:
   <<: *default
