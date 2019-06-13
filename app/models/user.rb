@@ -4,10 +4,14 @@ class User < ApplicationRecord
                                   foreign_key: :follower_id,
                                   dependent:   :destroy
   has_many :passive_relationships, class_name:  Relationship.name,
-                                   foreign_key: :followed_id,
+                                   foreign_key: :followable_id,
                                    dependent:   :destroy
-  has_many :following, through: :active_relationships, source: :followed
+  has_many :following, through: :active_relationships, source: :followable
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :following_books, through: :active_relationships,
+   source: :followable, source_type: "Book"
+  has_many :following_authors, through: :active_relationships,
+    source: :followable, source_type: "Author"
   has_many :favorites, dependent: :destroy
   has_many :ratings, dependent: :destroy
   has_many :requests, dependent: :destroy

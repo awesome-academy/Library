@@ -1,12 +1,12 @@
 User.create!(email: "tranhongson@gmail.com",
-    name: "Pham Ba Dat",
+    name: "Hong Son",
     gender: User.genders[:male],
     birthday: "4/10/1997",
     address: "76 Nguyen Luong Bang",
     role: User.roles[:admin])
 
 User.create!(email: "nampham97@gmail.com",
-    name: "Ho Trung Anh",
+    name: "Hoai Nam",
     gender: User.genders[:male],
     birthday: "3/5/1997",
     address: "6 Nguyen Trai",
@@ -67,14 +67,14 @@ Book.create!(category_id: 5,
    publishing_year: 1973,
    number_of_books: 20)
 Comment.create!(user_id: 1,
-     book_id: 2,
-     reply_id: 0,
+     commentable_id: 2,
+     commentable_type: "Book",
      comment: "Blalalala")
 Comment.create!(user_id: 1,
-     book_id: 3,
-     reply_id: 1,
+     commentable_id: 3,
+     commentable_type: "Book",
      comment: "quafndmnfmdnf")
 Comment.create!(user_id: 2,
-     book_id: 2,
-     reply_id: 0,
-     comment: "Isisisiss") 
+     commentable_id: 2,
+     commentable_type: "Comment",
+     comment: "abcxyz")
