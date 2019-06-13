@@ -1,0 +1,28 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.label :name, t("name") %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :email, t("email") %>
+  <%= f.email_field :email, class: "form-control" %>
+
+  <%= f.label :address, t("address") %>
+  <%= f.text_field :address, class: "form-control" %>
+
+  <%= f.label :birthday, t("birth_day") %>
+  <%= f.date_field :birthday, class: "form-control" %>
+
+  <%= f.label :gender, t("gender") %>
+  <%= f.radio_button :gender, :male, class: "radio-inline" %>
+  <%= f.label :gender, t("male"), value: :male %>
+  <%= f.radio_button :gender, :female, class: "radio-inline" %>
+  <%= f.label :gender, t("female"), value: :female %>
+  <br />
+  <%= f.label :password, t("password") %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :password_confirmation, t("password_confirmation") %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
