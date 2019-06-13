@@ -1,8 +1,80 @@
-# frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!(email: "tranhongson@gmail.com",
+    name: "Pham Ba Dat",
+    gender: User.genders[:male],
+    birthday: "4/10/1997",
+    address: "76 Nguyen Luong Bang",
+    role: User.roles[:admin])
+
+User.create!(email: "nampham97@gmail.com",
+    name: "Ho Trung Anh",
+    gender: User.genders[:male],
+    birthday: "3/5/1997",
+    address: "6 Nguyen Trai",
+    role: User.roles[:admin])
+
+Category.create!(name: "Fantasy")
+Category.create!(name: "Sci-fi")
+Category.create!(name: "Thriller")
+Category.create!(name: "Comedy")
+Category.create!(name: "Tragedy")
+
+Publisher.create!(name: "Shogakukan",
+        address: "75 SHinjuku, Tokyo")
+Publisher.create!(name: "Bunko",
+        address: "65 Minagara, Osaka")
+Publisher.create!(name: "Oxford",
+        address: "75 Saint Patrict, London")
+
+Author.create!(name:"Victor Hugo")
+Author.create!(name:"Shakespear")
+Author.create!(name:"Andersen")
+Author.create!(name:"Murakami")
+Author.create!(name:"Jujio.F.Fujiko")
+
+Book.create!(category_id: 1,
+   publisher_id: 1,
+   name: "Romeo&Julieta",
+   description: "Bla bla bla",
+   number_of_pages: 200,
+   publishing_year: 1959,
+   number_of_books: 20)
+Book.create!(category_id: 1,
+   publisher_id: 2,
+   name: "Little Mermaid",
+   description: "Bla bla bla",
+   number_of_pages: 147,
+   publishing_year: 1939,
+   number_of_books: 15)
+Book.create!(category_id: 2,
+   publisher_id: 3,
+   name: "Doraemon",
+   description: "Bla bla bla",
+   number_of_pages: 301,
+   publishing_year: 1954,
+   number_of_books: 30)
+Book.create!(category_id: 2,
+   publisher_id: 2,
+   name: "Norgerian Forest",
+   description: "Bla bla bla",
+   number_of_pages: 120,
+   publishing_year: 1956,
+   number_of_books: 10)
+Book.create!(category_id: 5,
+   publisher_id: 1,
+   name: "Trai tim ben them",
+   description: "Bla bla bla",
+   number_of_pages: 163,
+   publishing_year: 1973,
+   number_of_books: 20)
+Comment.create!(user_id: 1,
+     book_id: 2,
+     reply_id: 0,
+     comment: "Blalalala")
+Comment.create!(user_id: 1,
+     book_id: 3,
+     reply_id: 1,
+     comment: "quafndmnfmdnf")
+Comment.create!(user_id: 2,
+     book_id: 2,
+     reply_id: 0,
+     comment: "Isisisiss") 
