@@ -76,3 +76,14 @@ en:
   books:
     read: "Read"
     all_book: "All Book"
+    select: "Select"
+    search: "Search now!"
+    vnd: " VNĐ"
+    book_detail: "Book Detail"
+    category: "Category: "
+    publisher: "Publisher: "
+    author: "Author: "
+    year_writing: "Year of writing: "
+    quantity_page: "Quantity of page: "
+    quantity_book: "Quantity:  "
+    
