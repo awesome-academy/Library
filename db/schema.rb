@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_06_14_050729) do
 
-  create_table "author_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "author_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "author_id"
     t.bigint "book_id"
     t.datetime "created_at", null: false
@@ -21,14 +21,14 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["book_id"], name: "index_author_books_on_book_id"
   end
 
-  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.integer "description"
     t.integer "number_of_pages"
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "comment"
     t.integer "commentable_id"
     t.string "commentable_type"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "book_id"
     t.datetime "created_at", null: false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "string"
     t.string "address"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ratings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "ratings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "rating"
     t.bigint "user_id"
     t.bigint "book_id"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
-  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "followable_id"
     t.text "followable_type"
     t.integer "follower_id"
@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "request_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "request_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "status", default: 0, null: false
     t.datetime "return_day"
     t.integer "quantity"
@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["book_id"], name: "index_request_details_on_book_id"
   end
 
-  create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "status", default: 0, null: false
     t.datetime "borrowed_day"
     t.bigint "user_id"
@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_050729) do
     t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "name"

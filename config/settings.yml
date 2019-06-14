@@ -4,3 +4,5 @@ minimum_password_length: 6
 maximum_address_length: 250
 gravatar_size: 80
 remember_me: "1"
+book:
+  per_page: 9

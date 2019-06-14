@@ -1,0 +1,10 @@
+<% provide(:title, t("books.all_book")) %>
+<h1><%= t("books.all_book") %></h1>
+
+<%= will_paginate %>
+
+<ul class="tours">
+  <%= render @books %>
+</ul>
+
+<%= will_paginate %>
