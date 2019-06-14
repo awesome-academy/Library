@@ -1,6 +1,8 @@
 User.create!(email: "tranhongson@gmail.com",
     name: "Hong Son",
     gender: User.genders[:male],
+    password: "foobar",
+    password_confirmation: "foobar",
     birthday: "4/10/1997",
     address: "76 Nguyen Luong Bang",
     role: User.roles[:admin])
@@ -8,6 +10,8 @@ User.create!(email: "tranhongson@gmail.com",
 User.create!(email: "nampham97@gmail.com",
     name: "Hoai Nam",
     gender: User.genders[:male],
+    password: "foobar",
+    password_confirmation: "foobar",
     birthday: "3/5/1997",
     address: "6 Nguyen Trai",
     role: User.roles[:admin])

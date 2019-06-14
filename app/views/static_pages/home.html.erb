@@ -1,11 +1,11 @@
  <% provide(:title, t("root")) %>
 <div class="center jumbotron">
-  <h1><%= t("home.hello") %></h1>
+  <h1><%= t ".hello" %></h1>
   <h2>
-    <%= raw t("home.home_page",
-    href1: link_to(t("sun_library"), t("footer.link_framgia"))) %>
+    <%= raw t(".home_page",
+    href1: link_to(t("sun_library"), t("footer.link_sun"))) %>
   </h2>
-  <%= link_to t("home.sign_up"), "#", class: "btn btn-lg btn-primary" %>
+  <%= link_to t("sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
 <%= image_tag("framgia.jpg", alt: "logo", class: "image_home") %>
