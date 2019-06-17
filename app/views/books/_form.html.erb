@@ -1,0 +1,6 @@
+<%= form_for(@book, url: books_path) do |f| %>
+  <%= f.number_field :number_of_pages, class: "form_num",
+    min: Settings.book.quantity_min,
+    max: Settings.book.quantity_max %>
+  <%= f.submit "add to cart", class: "add-to-cart btn btn-default", type: "button" %>
+<% end %>

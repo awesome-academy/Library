@@ -10,6 +10,10 @@ class Book < ApplicationRecord
   has_many :authors, through: :author_books
 
   delegate :name, to: :category, prefix: :category
+  delegate :name, to: :publisher, prefix: :publisher
   scope :newest, ->{order :created_at}
   accepts_nested_attributes_for :author_books
+  def writers
+    authors.map(&:name).join(", ")
+  end
 end

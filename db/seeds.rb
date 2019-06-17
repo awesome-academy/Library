@@ -35,6 +35,17 @@ Author.create!(name:"Andersen")
 Author.create!(name:"Murakami")
 Author.create!(name:"Jujio.F.Fujiko")
 
+AuthorBook.create!(author_id: 1,
+   book_id: 1)
+AuthorBook.create!(author_id: 2,
+   book_id: 2)
+AuthorBook.create!(author_id: 3,
+   book_id: 3)
+AuthorBook.create!(author_id: 4,
+   book_id: 4)
+AuthorBook.create!(author_id: 5,
+   book_id: 5)
+
 Book.create!(category_id: 1,
    publisher_id: 1,
    name: "Romeo&Julieta",
