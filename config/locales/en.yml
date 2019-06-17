@@ -1,5 +1,4 @@
- en:
-  title: "Library"
+en:
   sun_library: "SonNam Library"
   root: "Home"
   book: "Book"
@@ -72,3 +71,8 @@
   user_deleted: "User deleted successfully"
   delete_failed: "Delete failed"
   delete: "Delete"
+  messenger:
+    no_data: "Sorry, the data can not be found"
+  books:
+    read: "Read"
+    all_book: "All Book"

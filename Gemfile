@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
-ruby "2.5.3"
+ruby "2.5.5"
 
 gem "bcrypt"
 gem "bootsnap", ">= 1.1.0", require: false
@@ -22,6 +22,7 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "wdm", ">= 0.1.0"
 gem "will_paginate"
 
 group :development, :test do
@@ -40,10 +41,6 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "chromedriver-helper"
   gem "selenium-webdriver"
-end
-
-group :production do
-  gem "fog", "1.42"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

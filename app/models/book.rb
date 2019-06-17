@@ -9,6 +9,7 @@ class Book < ApplicationRecord
   has_many :author_books
   has_many :authors, through: :author_books
 
+  delegate :name, to: :category, prefix: :category
   scope :newest, ->{order :created_at}
   accepts_nested_attributes_for :author_books
 end
