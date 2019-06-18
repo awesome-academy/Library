@@ -1,10 +1,10 @@
-<% provide(:title, t("books.all_book")) %>
-<h1><%= t("books.all_book") %></h1>
+<% provide(:title, t(".books")) %>
+<div class="container">
+  <h1><%= t(".books") %></h1>
+  <%= will_paginate @books %>
+ <ul class="books">
+    <%= render @books %>
+  </ul>
+  <%= will_paginate @books %>
 
-<%= will_paginate %>
-
-<ul class="tours">
-  <%= render @books %>
-</ul>
-
-<%= will_paginate %>
+</div>

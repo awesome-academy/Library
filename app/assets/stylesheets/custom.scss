@@ -183,3 +183,28 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.active-cyan-4 {
+  input{
+    margin: 8px 0;
+  }
+  input[type=text]:focus:not([readonly]) {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 0 1px #4dd0e1;
+  }
+}
+
+/* Users index */
+.books {
+  .card{
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 15px;
+    .card-body{
+      padding: 15px;
+    }
+    &:hover{
+      border: 1px solid #ffbc00;
+    }
+  }
+}

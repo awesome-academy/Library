@@ -13,6 +13,10 @@ en:
       hello: "Welcome to the Sun* Library"
       sign_up: "Sign up now!"
       home_page: "This is the home page for the %{href1} application."
+      book: "New Books"
+  layouts:
+    search:
+      search: "Search"
   misc:
     error_message_html: "This form contains %{error_count}"
     errors:
@@ -86,4 +90,8 @@ en:
     year_writing: "Year of writing: "
     quantity_page: "Quantity of page: "
     quantity_book: "Quantity:  "
-    
+    index:
+      books: "All books"
+    book:
+      update: "Published in "
+
