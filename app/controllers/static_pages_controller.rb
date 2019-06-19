@@ -1,3 +1,7 @@
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    @books =
+      Book.name_like(params[:search]).newest.paginate page: params[:page],
+        per_page: Settings.book.per_page
+  end
 end

@@ -1,17 +1,12 @@
-<div class="col-md-4 ftco-animate">
-  <div class="destination">
-    <div class="text p-3">
-      <div class="d-flex">
-        <div class="one">
-          <h3>
-            <%= link_to book.name, book %>
-          </h3>
-        </div>
-      </div>
-      <hr>
-      <p class="bottom-area d-flex">
-        <span><i class="icon-map-o"></i><%= book.category_name %></span>
-        <span class="ml-auto"><a href=""><%= t("books.read") %></a></span>
+<div class="col-md-3">
+  <div class="card mb-3">
+    <%= link_to image_tag("https://about.canva.com/wp-content/uploads/sites/3/2015/01/art_bookcover.png",
+      alt: "Rails logo", width: "100%"), book %>
+    <div class="card-body">
+      <h3 class="card-title"><%= link_to book.name, book %></h3>
+      <p class="card-text"><%= book.writers %></p>
+      <p class="card-text">
+        <small class="text-muted"><%= t(".update") %> <%= book.publishing_year %></small>
       </p>
     </div>
   </div>

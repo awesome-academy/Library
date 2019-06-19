@@ -11,8 +11,11 @@ class Book < ApplicationRecord
 
   delegate :name, to: :category, prefix: :category
   delegate :name, to: :publisher, prefix: :publisher
+
   scope :newest, ->{order :created_at}
+  scope :name_like, ->(name){where "name LIKE ?", "%#{name}%" if name.present?}
   accepts_nested_attributes_for :author_books
+
   def writers
     authors.map(&:name).join(", ")
   end
